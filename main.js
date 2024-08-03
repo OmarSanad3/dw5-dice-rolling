@@ -79,7 +79,7 @@ function displayPopUp() {
 
 /* Add event listener for roll button */
 rollBtn.addEventListener("click", function () {
-  let diceValue = getRandomeNumber(2, 6);
+  let diceValue = getRandomeNumber();
   diceImg.src = diceImages[diceValue - 1];
 
   console.log(
