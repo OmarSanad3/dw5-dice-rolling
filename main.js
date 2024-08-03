@@ -1,12 +1,12 @@
 let currPlayerIdx = 0;
 
 let diceImages = [
-  "/assets/dice-images/dice-six-faces-1.png",
-  "/assets/dice-images/dice-six-faces-2.png",
-  "/assets/dice-images/dice-six-faces-3.png",
-  "/assets/dice-images/dice-six-faces-4.png",
-  "/assets/dice-images/dice-six-faces-5.png",
-  "/assets/dice-images/dice-six-faces-6.png",
+  "assets/dice-images/dice-six-faces-1.png",
+  "assets/dice-images/dice-six-faces-2.png",
+  "assets/dice-images/dice-six-faces-3.png",
+  "assets/dice-images/dice-six-faces-4.png",
+  "assets/dice-images/dice-six-faces-5.png",
+  "assets/dice-images/dice-six-faces-6.png",
 ];
 
 let players = [new Map(), new Map()];
@@ -73,14 +73,18 @@ function getRandomeNumber(from = 1, to = 6) {
   return Math.floor(Math.random() * (to - from + 1)) + from;
 }
 
+function displayPopUp() {
+
+}
+
 /* Add event listener for roll button */
 rollBtn.addEventListener("click", function () {
-  let diceValue = getRandomeNumber();
+  let diceValue = getRandomeNumber(2, 6);
   diceImg.src = diceImages[diceValue - 1];
 
   console.log(
     players[currPlayerIdx].get("totScore") +
-      players[currPlayerIdx].get("currScore")
+      players[currPlayerIdx].get("currScore") + diceValue
   );
 
   if (diceValue === 1) {
@@ -103,7 +107,7 @@ rollBtn.addEventListener("click", function () {
       30
     ) {
       addCurrScoreToTotScore();
-      alert(`Player ${currPlayerIdx + 1} wins!`);
+      displayPopUp();
       newGameBtn.click();
     }
   }
