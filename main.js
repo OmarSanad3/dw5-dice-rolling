@@ -1,12 +1,12 @@
 let currPlayerIdx = 0;
 
 let diceImages = [
-  "./assets/dice-images/dice-six-faces-1.png",
-  "./assets/dice-images/dice-six-faces-2.png",
-  "./assets/dice-images/dice-six-faces-3.png",
-  "./assets/dice-images/dice-six-faces-4.png",
-  "./assets/dice-images/dice-six-faces-5.png",
-  "./assets/dice-images/dice-six-faces-6.png",
+  "assets/dice-images/dice-six-faces-1.png",
+  "assets/dice-images/dice-six-faces-2.png",
+  "assets/dice-images/dice-six-faces-3.png",
+  "assets/dice-images/dice-six-faces-4.png",
+  "assets/dice-images/dice-six-faces-5.png",
+  "assets/dice-images/dice-six-faces-6.png",
 ];
 
 let players = [new Map(), new Map()];
