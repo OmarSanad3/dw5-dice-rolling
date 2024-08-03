@@ -1,12 +1,12 @@
 let currPlayerIdx = 0;
 
 let diceImages = [
-  "assets/dice-images/dice-six-faces-1.png",
-  "assets/dice-images/dice-six-faces-2.png",
-  "assets/dice-images/dice-six-faces-3.png",
-  "assets/dice-images/dice-six-faces-4.png",
-  "assets/dice-images/dice-six-faces-5.png",
-  "assets/dice-images/dice-six-faces-6.png",
+  "./assets/dice-images/dice-six-faces-1.png",
+  "./assets/dice-images/dice-six-faces-2.png",
+  "./assets/dice-images/dice-six-faces-3.png",
+  "./assets/dice-images/dice-six-faces-4.png",
+  "./assets/dice-images/dice-six-faces-5.png",
+  "./assets/dice-images/dice-six-faces-6.png",
 ];
 
 let players = [new Map(), new Map()];
@@ -66,7 +66,7 @@ newGameBtn.addEventListener("click", function () {
 
   currPlayerIdx = 0;
   setActivePlayer();
-  diceImg.src = "/assets/dice-images/dice-six-faces-1.png";
+  diceImg.src = "./assets/dice-images/dice-six-faces-1.png";
 });
 
 function getRandomeNumber(from = 1, to = 6) {
@@ -74,7 +74,7 @@ function getRandomeNumber(from = 1, to = 6) {
 }
 
 function displayPopUp() {
-
+  
 }
 
 /* Add event listener for roll button */
