@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient-color-1: #050C9C;
+  --gradient-color-2: #3572EF;
+  --gradient-color-3: #3ABEF9;
+  --gradient: linear-gradient(90deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 50%, var(--gradient-color-3) 100%);
+  --border-raduis: 20px;
+  --padding: 20px;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--gradient);
+}
+
+.container {
+  margin: 50px auto;
+  width: 80%;
+  border-radius: var(--border-raduis);
+  position: relative;
+}
+
+.container .two-players {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+}
+
+.container .two-players > div {
+  width: 50%;
+  padding: var(--padding);
+  background-color: rgba(167, 230, 255, 0.75);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .two-players > div > h3 {
+  margin-top: 50px;
+  font-size: 3em;
+}
+
+.container .player1 {
+  border-radius: var(--border-raduis) 0 0 var(--border-raduis);
+}
+
+.container .player2 {
+  border-radius: 0 var(--border-raduis) var(--border-raduis) 0;
+}
+
+div.two-players div.active {
+  background-color: rgba(167, 230, 255, 1);
+}
+
+/* -------------------- Start Total Score Box -------------------- */
+
+.container .two-players .tot-score-box {
+  position: absolute;
+  bottom: 200px;
+  padding: 30px;
+  border-radius: var(--border-raduis);
+
+  background: var(--gradient);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .two-players .tot-score-box > h4 {
+  margin-top: 20px;
+  font-size: 2.5em;
+}
+
+/* ==================== End Total Score Box ==================== */
+
+
+/* -------------------- Start Buttons -------------------- */
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-raduis);
+  background-color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  width: 150px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container button, .container .dice {
+  position: absolute;
+  left: calc(50% - 75px);
+}
+
+.container button.new-game {
+  top: 100px;
+}
+
+.container button.roll-dice {
+  bottom: 200px;
+}
+
+.container button.hold {
+  bottom: 100px;
+}
+
+/* ==================== End Buttons ==================== */
+
+
+/* -------------------- Start Dice -------------------- */
+
+.dice {
+  width: 150px;
+  top: 200px;
+}
+
+/* ==================== End Dice ==================== */
