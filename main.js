@@ -66,7 +66,7 @@ newGameBtn.addEventListener("click", function () {
 
   currPlayerIdx = 0;
   setActivePlayer();
-  diceImg.src = "./assets/dice-images/dice-six-faces-1.png";
+  diceImg.src = diceImages[0];
 });
 
 function getRandomeNumber(from = 1, to = 6) {
