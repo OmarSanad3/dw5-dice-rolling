@@ -8,6 +8,8 @@
   --gradient-color-1: #050C9C;
   --gradient-color-2: #3572EF;
   --gradient-color-3: #3ABEF9;
+  --player-box-color: #a7e6ffbf;
+  --player-box-color-active: #a7e6ff;
   --gradient: linear-gradient(90deg, var(--gradient-color-1) 0%, var(--gradient-color-2) 50%, var(--gradient-color-3) 100%);
   --border-raduis: 20px;
   --padding: 20px;
@@ -16,6 +18,21 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   background: var(--gradient);
+}
+
+div.change-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+div.change-theme .circle {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border: 2px solid white;
 }
 
 .container {
@@ -32,10 +49,11 @@ body {
   flex-direction: row;
 }
 
+
 .container .two-players > div {
   width: 50%;
   padding: var(--padding);
-  background-color: rgba(167, 230, 255, 0.75);
+  background-color: var(--player-box-color);
   display: flex;
   justify-content: start;
   align-items: center;
@@ -55,8 +73,8 @@ body {
   border-radius: 0 var(--border-raduis) var(--border-raduis) 0;
 }
 
-div.two-players div.active {
-  background-color: rgba(167, 230, 255, 1);
+.two-players div.active {
+  background-color: var(--player-box-color-active);
 }
 
 /* -------------------- Start Total Score Box -------------------- */

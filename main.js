@@ -73,9 +73,7 @@ function getRandomeNumber(from = 1, to = 6) {
   return Math.floor(Math.random() * (to - from + 1)) + from;
 }
 
-function displayPopUp() {
-  
-}
+function displayPopUp() {}
 
 /* Add event listener for roll button */
 rollBtn.addEventListener("click", function () {
@@ -84,7 +82,8 @@ rollBtn.addEventListener("click", function () {
 
   console.log(
     players[currPlayerIdx].get("totScore") +
-      players[currPlayerIdx].get("currScore") + diceValue
+      players[currPlayerIdx].get("currScore") +
+      diceValue
   );
 
   if (diceValue === 1) {
